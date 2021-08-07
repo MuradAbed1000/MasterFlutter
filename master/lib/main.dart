@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
          brightness: Brightness.dark,
         //primarySwatch: Colors.red,//not work in darkchange App bar color
       ),
-      initialRoute: "/",
+      initialRoute: MyRoutes.homeRoute,
       routes: {
         "/":(context)=>LoginPage(),
         MyRoutes.homeRoute:(context)=>HomePage(),
