@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -7,7 +9,7 @@ class MyThemes {
       primarySwatch: Colors.deepPurple, //change App bar color
       // brightness: Brightness.light,
       fontFamily: GoogleFonts.poppins().fontFamily,
-      cardColor:Colors.white,
+      cardColor: Colors.white,
       canvasColor: creeamColor,
       buttonColor: darkBluishColor,
       accentColor: Colors.deepPurple,
@@ -18,20 +20,25 @@ class MyThemes {
           iconTheme: IconThemeData(color: Colors.black),
           textTheme: Theme.of(context).textTheme));
   static ThemeData darkTheme(BuildContext context) => ThemeData(
-   brightness: Brightness.dark,
-      primarySwatch: Colors.deepPurple, //change App bar color
-      cardColor:Colors.black,
-      canvasColor: darkcreeamColor,
-      buttonColor: LightBluishColor,
-      accentColor: Colors.white,
-      
-      fontFamily: GoogleFonts.poppins().fontFamily,
-      //  primaryTextTheme: GoogleFonts.latoTextTheme(),
-      appBarTheme: AppBarTheme(
+        brightness: Brightness.dark,
+        primarySwatch: Colors.deepPurple, //change App bar color
+        cardColor: Colors.black,
+        canvasColor: darkcreeamColor,
+        buttonColor: LightBluishColor,
+        accentColor: Colors.white,
+
+        fontFamily: GoogleFonts.poppins().fontFamily,
+        //  primaryTextTheme: GoogleFonts.latoTextTheme(),
+        appBarTheme: AppBarTheme(
           color: Colors.black,
           elevation: 0.0,
           iconTheme: IconThemeData(color: Colors.white),
-          textTheme: Theme.of(context).textTheme));
+          textTheme: Theme.of(context).textTheme.copyWith(
+                headline6:
+                    context.textTheme.headline6?.copyWith(color: Colors.white),
+              ),
+        ),
+      );
 
 //Colors
   static Color creeamColor = Color(0xfff5f5f5);
