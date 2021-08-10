@@ -2,11 +2,11 @@ import 'dart:convert';
 
 class CatalogModel {
   static List<Item>? items;
-  //Get Item by id
+  //Get Item by id@
  static Item getById(int id) =>
       items!.firstWhere((element) => element == id, orElse: null);
 
-  //Get Item by position
+  //Get Item by position@
  static Item getByPosition(int pos) => items![pos];
 }
 
