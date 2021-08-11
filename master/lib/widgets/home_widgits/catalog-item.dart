@@ -41,9 +41,9 @@ class CatalogItem extends StatelessWidget {
       child: Row(
         children: [
           Hero(
-            tag: Key(catalog!.id.toString()),
+            tag: Key(catalog.id.toString()),
             child: CatalogImage(
-              image: catalog!.image,
+              image: catalog.image,
             ),
           ),
           Expanded(
@@ -51,8 +51,8 @@ class CatalogItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              catalog!.name!.text.lg.color(context.accentColor).bold.make(),
-              catalog!.desc!.text.textStyle(context.captionStyle!).make(),
+              catalog.name.text.lg.color(context.accentColor).bold.make(),
+              catalog.desc.text.textStyle(context.captionStyle!).make(),
               10.heightBox,
               ButtonBar(
                 alignment: MainAxisAlignment.spaceBetween,
