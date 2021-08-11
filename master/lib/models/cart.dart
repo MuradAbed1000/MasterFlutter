@@ -1,6 +1,11 @@
 import 'package:master/models/catalog.dart';
 
 class CartModel {
+  static final cartModel = CartModel._internal();
+
+  CartModel._internal();
+  factory CartModel() => cartModel;
+
   //catalog field
   CatalogModel? _catalog;
   //Collection od ids -stor Ids of each item
@@ -24,6 +29,7 @@ class CartModel {
   void add(Item item) {
     _itemIds.add(item.id);
   }
+
 //Remove Item
   void remove(Item item) {
     _itemIds.remove(item.id);
